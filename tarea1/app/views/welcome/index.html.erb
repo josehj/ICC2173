@@ -1,0 +1,25 @@
+<h1>Tarea 1</h1>
+<p>Ultimas 10 direcciones ip de clientes</p>
+
+
+<table class="basic_table">
+  <thead>
+    <tr>
+      <th>Puesto</th>
+      <th>IP Cliente</th>
+      <th>Fecha</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% count = 1 %>
+    <% @ips.each do |ip|%>
+      <tr>
+        <th><%= count %></th>
+        <th><%= ip.ip %></th>
+        <th><%= ip.fecha %></th>
+      </tr>
+      <%count = count +1%>
+    <% end %>
+  </tbody>
+</table>
